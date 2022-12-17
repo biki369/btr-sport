@@ -1,0 +1,35 @@
+
+.footer-link{
+    flex-wrap: wrap;
+}
+
+.footer-link .link{
+    border-right: 1px solid #999;
+    padding: 0 20px;
+}
+.footer-link .link:hover{
+    color: #999;
+}
+
+.footer-bottom p {
+    text-align: center;
+    margin: 0;
+} 
+.footer-bottom p.update-version span {
+    color: #2A75BB;
+}
+.develop-by >div{
+    width: 100%;
+}
+
+.develop-by  h6{
+    font-size: 15px;
+    color: #990000;
+    text-align: center
+}
+.develop-by  p {
+    font-size: 13px;
+    color: #006FBb;
+    text-align: center;
+    font-weight: bold;
+}

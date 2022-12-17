@@ -1,0 +1,86 @@
+.top-bar{
+    width: 100%;
+    color: #fff;
+}
+.top-content{
+    background: #1d1d1d;
+}
+
+.access{
+  margin: 0;
+  padding-top: 3px;
+}
+.language p{
+ padding: 0 10px;
+ margin: 0;
+ color: #fff;
+ border-right: 1px solid #000;
+}
+.citizen{
+    height: 33px;
+   margin-left: 6rem;
+}
+.citizen .link {
+    background: #2A75BB;;
+    color: #fff;
+    padding: 10px 15px;
+}
+.citizen .link:last-child{
+    background:none;
+}
+
+
+
+.left .link{
+    display: flex;
+    column-gap: 10px;
+}
+.left .logo{
+    width: 70px;
+    height: 80px;
+}
+.left .logo img {
+    width: 100%;
+}
+.left .titles h3{
+  margin: 0;
+  text-transform: uppercase;
+  font-size:130%;
+  padding: 1px 0;
+}
+.left .titles h3:nth-child(1){
+ color: #000;
+}
+.left .titles h3:nth-child(2){
+ color: #990000
+}
+.left .titles h3:nth-child(3){
+ color: #2A75BB;
+}
+.r-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right .r-content input{
+    border: 1px solid rgba(0,0,0,0.2);
+    color: #777;
+    font-family: open sans;
+    font-size: 15px;
+    height: 40px;
+    padding: 5px 55px 5px 10px;
+    width: 285px;
+}
+.right .r-content button{
+    background-color: #2a75bb;
+    color: #fff;
+    outline: none;
+    border:none;
+    height: 40px;
+    width: 46px;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px; */
+    margin: 0;
+    font-size: 30px;
+}
