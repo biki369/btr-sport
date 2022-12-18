@@ -3,34 +3,50 @@ import { Link } from 'react-router-dom';
 import './topbar.css';
 import logo from '../../../assets/logo/logo.png'
 const TopBar = () => {
+    const width = window.innerWidth;
+    const breakpoint = 960;
     return (
         <div className="top-bar">
             <div className="top-content">
-            <div className="container ">
-                <div className="row">
-                    <div className="col-4 d-flex language">
-                        <p>English</p>
-                        <p>Skip to content</p>
-                        <p>A</p>
-                        <p>A</p>
-                        <p>A</p>
-                        <p>A</p>
-                    </div>
-                    <div className="col-2"></div>
-                    <div className="col-3"><p className="access">i am now accessing as a:</p></div>
-                    <div className="col-3 ">
-                        <div className="citizen">
-                            <Link className="link">Citizen</Link>
-                            <Link className="link">Government</Link>
+                <div className="container ">
+                    <div className="row">
+                        <div className="col-4 d-flex language">
+                            <p>English</p>
+                            {
+                                width > breakpoint ?
+                                    <>
+                                        <p>Skip to content</p>
+                                        <p>A</p>
+                                        <p>A</p>
+                                        <p>A</p>
+                                        <p>A</p>
+                                    </> : ""
+                            }
+
+                        </div>
+                        <div className="col-2"></div>
+                        <div className="col-3">
+                            {width < breakpoint ? "" : <>
+                                <p className="access">i am now accessing as a:</p>
+                            </>}
+                        </div>
+                        <div className="col-3 ">
+                            {
+                                width > breakpoint ?
+                                    <> <div className="citizen">
+                                        <Link className="link">Citizen</Link>
+                                        <Link className="link">Government</Link>
+                                    </div></>
+                                    : ""
+                            }
 
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
 
             <div className="container bottom-bar pt-2">
-                <div className=" d-flex justify-content-between align-items-center">
+                <div className=" d-flex justify-content-between align-items-center flex-wrap">
                     <div className="left">
                         <Link className="link">
                             <div className="logo">
@@ -44,10 +60,14 @@ const TopBar = () => {
                         </Link>
                     </div>
                     <div className="right">
-                        <div className="r-content">
-                           <input type="text" placeholder="Search"/>
-                          <button><i className='bx bx-search-alt'></i></button>
-                        </div>
+                        {
+                            width > breakpoint ? <><div className="r-content">
+                                <input type="text" placeholder="Search" />
+                                <button><i className='bx bx-search-alt'></i></button>
+                            </div></> : ""
+
+                        }
+
                     </div>
                 </div>
 

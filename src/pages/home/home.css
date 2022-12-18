@@ -22,6 +22,15 @@
   font-family: "Open Sans", sans-serif;
 }
 
+.carousel-control-prev-icon{
+ filter:invert(1);
+  font-size:30px;
+}
+.carousel-control-next-icon{
+ filter:invert(1);
+  font-size:30px;
+}
+
 .slider {
   /* width: 100%; */
   /* height: 20px */
@@ -75,6 +84,7 @@
 }
 
 .game-event {
+  /* width: 100%; */
   margin: 30px 0 0;
   padding: 20px 0;
   border-top: 2px solid #bfc1c3;
@@ -90,8 +100,10 @@
 
 .event {
   width: 280px;
+  margin:0 auto;
   margin: 6px;
   height: 150px;
+  /* text-align: center; */
 }
 .event > .link {
   /* width: 280px; */
@@ -154,5 +166,24 @@
 }
 
 .brand {
-  display: flex;
+  width: 100%;
+  padding: 30px 0;
+  box-shadow: 0 1px 2px #e5e5e5;
+  background-color: #e5e5e5;
+  /* display: flex; */
 }
+
+
+
+/* slick arrow */
+.slick-next:before,
+.slick-prev:before{
+  color: #000!important;
+
+}
+.slick-arrow.slick-prev,
+.slick-arrow.slick-next{
+   color: #000!important;
+   /* font-size: 30px; */
+}
+

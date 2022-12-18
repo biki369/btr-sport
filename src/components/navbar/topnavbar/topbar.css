@@ -16,6 +16,10 @@
  color: #fff;
  border-right: 1px solid #000;
 }
+.language p:nth-child(1){
+    background-color: #F9B500;
+    color: #000;
+}
 .citizen{
     height: 33px;
    margin-left: 6rem;
@@ -28,8 +32,6 @@
 .citizen .link:last-child{
     background:none;
 }
-
-
 
 .left .link{
     display: flex;

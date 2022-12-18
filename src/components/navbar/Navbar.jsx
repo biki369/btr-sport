@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import { Button, Form } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -20,16 +21,23 @@ const NavbarB = () => {
         });
     })
 
+    const width = window.innerWidth;
+    const breakpoint = 960;
+    // {
+    //     width < breakpoint ? "" : <>
+    //         <p className="access">i am now accessing as a:</p>
+    //     </>
+    // }
 
 
     return (
         <div className="mt-4" >
             <Navbar className="navbarCustom" expand="lg" ref={oaNavBarRootRef}>
                 <Container>
-                    <Navbar.Brand href="#home" className="main">Main</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
+                            <Nav.Link href="#home" className="main">Main</Nav.Link>
                             <Nav.Link href="#home" className="home"><i className='bx bxs-home'></i></Nav.Link>
                             <NavDropdown title="Organisations" id="basic-nav-dropdown">
                                 <NavDropdown.Item href="#action/3.1">Organisations</NavDropdown.Item>
@@ -77,7 +85,23 @@ const NavbarB = () => {
                             </NavDropdown>
                             <Nav.Link href="#home">Contact</Nav.Link>
                         </Nav>
+                        {/* <Form className="d-flex">
+                            <Form.Control
+                                type="search"
+                                placeholder="Search"
+                                className="me-2"
+                                aria-label="Search"
+                            />
+                            <Button variant="outline-success">Search</Button>
+                        </Form> */}
                     </Navbar.Collapse>
+                    {
+                            width < breakpoint ? <><div className="r-content">
+                                <input type="text" placeholder="Search" />
+                                <button><i className='bx bx-search-alt'></i></button>
+                            </div></> : ""
+
+                        }
                 </Container>
             </Navbar>
         </div>

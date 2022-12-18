@@ -9,8 +9,8 @@ import clickIcon from '../../assets/icon/click.jpg';
 import sliderImg1 from '../../assets/images/slider1.jpg';
 import brandImg from '../../assets/images/india-portal.jpg';
 import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+// import "~slick-carousel/slick/slick.css"; 
+// import "~slick-carousel/slick/slick-theme.css";
 import './home.css';
 
 
@@ -39,20 +39,45 @@ const brandsSlider = [
   {
     img: brandImg,
   },
+  {
+    img: brandImg,
+  },
+  {
+    img: brandImg,
+  },
+  {
+    img: brandImg,
+  },
 ]
-
+const settings = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 6,
+  slidesToScroll: 6,
+  responsive: [
+    {
+      breakpoint: 760,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        initialSlide: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    }
+  ]
+};
 
 
 const Home = () => {
 
-  const settings = {
-    dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 3
-  };
-  
+
 
 
 
@@ -294,37 +319,33 @@ const Home = () => {
 
         </div>
       </div>
-      <div className="container">
-        <div className="brand">
-          <div className="row">
-            {/* <Slider {...settings}>
-              {
-                brandsSlider.map((item, index) => (
-                  <div className="">
-                    <img
-                      className=""
-                      src={item.img}
-                      alt=""
-                    />
-                  </div>
-                ))
-              }
+      <div className="brand mb-3">
+        <div className="container">
+          <div className="">
+            <div className="row">
+              <div className="col-12">
+                <Slider {...settings}>
+                  {
+                    brandsSlider.map((item, index) => (
+                      <div className="m-0 ">
+                        <img
+                          className="m-0"
+                          src={item.img}
+                          alt=""
+                        />
+                      </div>
+                    ))
+                  }
+                </Slider>
+              </div>
 
-            </Slider> */}
-            {
-                brandsSlider.map((item, index) => (
-                  <div className="col-3">
-                    <img
-                      className="d-block "
-                      src={item.img}
-                      alt=""
-                    />
-                  </div>
-                ))
-              }
+            </div>
           </div>
         </div>
+
+
       </div>
+
     </div>
 
   )
