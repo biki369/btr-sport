@@ -8,6 +8,10 @@ import gameEventImg from '../../assets/images/Financial Assistance_B.png'
 import clickIcon from '../../assets/icon/click.jpg';
 import sliderImg1 from '../../assets/images/slider1.jpg';
 import brandImg from '../../assets/images/india-portal.jpg';
+import fb from "../../assets/images/facebook.png"
+import tw from "../../assets/images/twitter.png"
+import ig from "../../assets/images/instagram.png"
+import yt from "../../assets/images/youtube.png"
 import Slider from "react-slick";
 // import "~slick-carousel/slick/slick.css"; 
 // import "~slick-carousel/slick/slick-theme.css";
@@ -313,6 +317,28 @@ const Home = () => {
                 <div className="service-header">
                   <h3>FOLLOW US ON</h3>
                 </div>
+                <ul className="hero-ul social-link  d-flex">
+                  <li>
+                    <Link className="link" to='/'>
+                      <img src={fb} alt="" />
+                     </Link>
+                  </li>
+                  <li>
+                    <Link className="link" to='/'>
+                      <img src={yt} alt="" />
+                     </Link>
+                  </li>
+                  <li>
+                    <Link className="link" to='/'>
+                      <img src={tw} alt="" />
+                     </Link>
+                  </li>
+                  <li>
+                    <Link className="link" to='/'>
+                      <img src={ig} alt="" />
+                     </Link>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
